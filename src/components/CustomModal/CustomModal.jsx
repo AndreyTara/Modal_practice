@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import css from "./CustomModal.module.css";
-
+import "./Modal.css";
 const CustomModal = ({ isOpen, onClose, children }) => {
   return (
     <Modal
@@ -9,12 +9,14 @@ const CustomModal = ({ isOpen, onClose, children }) => {
       overlayClassName={css.overlay}
       className={css.content}
       ariaHideApp={false}
+      onRequestClose={() => onClose()}
+      closeTimeoutMS={300}
     >
       <button
         className={css.closeBtn}
         type="button"
         onClick={() => {
-          console.log("asdasdd");
+          onClose();
         }}
       >
         x

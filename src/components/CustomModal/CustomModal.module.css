@@ -18,8 +18,8 @@
   overflow: hidden;
   overflow-y: auto;
   z-index: 1;
-  /* opacity: 0; */
-  transition: opacity 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 .overlay::before,
 .overlay::after {
@@ -48,8 +48,8 @@
   background-color: #fff;
   border-radius: 30px;
   filter: drop-shadow(0 0 10px orange);
-  /* transform: translateY(50px); */
-  transition: transform 0.3s ease;
+  transform: translateY(50px);
+  transition: transform 0.3s;
 }
 .closeBtn {
   /* position: absolute;
